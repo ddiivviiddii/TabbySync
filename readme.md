@@ -42,6 +42,22 @@ Name of the Tabby configuration file. Currently, it is `config.yaml`
 
 Path for local backup place for config.yaml. No versioning or additional backup features are included—it simply performs a copy operation.
 
+### Runs script as application
+
+You can run this script as standalone application without Python on the host.
+
+Install `pyinstaller`:
+
+`pip install pyinstaller`
+
+Run from folder where the script is stored:
+
+`pyinstaller --onefile --windowed --name TabbySync main.py`
+
+Copy `TabbySync.exe` (for Windows application) to any folder for future use. Add `config.cfg` to this folder. Start of the application on Windows may be slow due possible antivirus check and start of PyInstaller engine.  
+
+
+
 ### Security
 
 Please note that `config.cfg` stores your WebDAV credentials in plain text format.
